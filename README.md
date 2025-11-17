@@ -1,33 +1,73 @@
-# ai-test-2
 
-A React + TypeScript starter project built with Vite, automatically deployed to GitHub Pages.
+# 🕹️ Pokedex App
 
-## 🚀 Live Demo
+A modern, minimalist React application for browsing and searching Pokémon using the [PokeAPI](https://pokeapi.co/). Built with React 19, TypeScript, and Vite.
 
-Once deployed, the application will be available at: `https://grepec-swo.github.io/ai-test-2/`
 
-## 📦 Features
+## ✨ Features
 
-- ⚛️ **React 19** - Latest version of React
-- 🔷 **TypeScript** - Type safety and better developer experience
-- ⚡ **Vite** - Lightning fast build tool with HMR (Hot Module Replacement)
-- 🎨 **ESLint** - Code quality and consistency
-- 🚀 **GitHub Actions** - Automatic deployment to GitHub Pages on push to main branch
+- 🧑‍💻 **Minimalist, Modern UI** – Clean, flat design inspired by real Pokedex devices
+- 🔍 **Search** – Instantly filter Pokémon by name
+- 🖼️ **Pokémon List** – Browse the first 151 Pokémon (Gen 1) with images and types
+- 📋 **Details Modal** – Click a Pokémon to view stats, types, height, and weight
+- ⚡ **Live Data** – All data fetched from [PokeAPI](https://pokeapi.co/)
+- 📱 **Responsive** – Works great on desktop and mobile
 
-## 🛠️ Development
+
+## 🛠️ Tech Stack
+
+- **Framework:** React 19 + TypeScript
+- **Build Tool:** Vite 7
+- **Styling:** Custom minimalist CSS
+- **API:** [PokeAPI](https://pokeapi.co/)
+- **Linting:** ESLint
+
+ai-test-2/
+
+## 📦 Project Structure
+
+```
+ai-test-2/
+├── src/
+│   ├── components/
+│   │   ├── PokemonCard.tsx      # Card for each Pokémon
+│   │   ├── PokemonDetails.tsx   # Modal with Pokémon details
+│   │   └── PokemonList.tsx      # Main list/search component
+│   ├── services/
+│   │   └── api.ts               # PokeAPI service
+│   ├── types/
+│   │   └── pokemon.ts           # TypeScript interfaces
+│   ├── App.tsx                  # Main app layout
+│   ├── App.css                  # App-level styles
+│   ├── main.tsx                 # Entry point
+│   └── index.css                # Global styles
+├── package.json                 # Dependencies and scripts
+├── tsconfig.json                # TypeScript config
+└── vite.config.ts               # Vite config
+```
+
+
+## 🚦 Getting Started
 
 ### Prerequisites
 
-- Node.js 20 or higher
-- npm 10 or higher
+- **Node.js** 20 or higher
+- **npm** 10 or higher
 
-### Installation
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/grepec-swo/ai-test-2.git
+cd ai-test-2
+```
+
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Start Development Server
+### 3. Start Development Server
 
 ```bash
 npm run dev
@@ -35,125 +75,59 @@ npm run dev
 
 The app will be available at `http://localhost:5173/`
 
-### Build for Production
+### 4. Build for Production
 
 ```bash
 npm run build
 ```
 
-The production-ready files will be in the `dist/` directory.
+Production files will be in the `dist/` directory.
 
-### Lint Code
 
-```bash
-npm run lint
-```
-
-### Preview Production Build
+## 📝 Available Scripts
 
 ```bash
-npm run preview
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run lint     # Run ESLint
+npm run preview  # Preview production build locally
 ```
 
-## 🚀 Deployment
+## 📝 Available Scripts
 
-This project is configured to automatically deploy to GitHub Pages when changes are pushed to the `main` branch. The deployment is handled by GitHub Actions (see `.github/workflows/deploy.yml`).
-
-### Manual Deployment
-
-You can also trigger a manual deployment from the Actions tab in GitHub.
-
-## 📁 Project Structure
-
-```
-ai-test-2/
-├── .github/
-│   └── workflows/
-│       └── deploy.yml       # GitHub Actions workflow for deployment
-├── public/                  # Static assets
-├── src/
-│   ├── assets/             # Images and other assets
-│   ├── App.tsx             # Main App component
-│   ├── App.css             # App styles
-│   ├── main.tsx            # Application entry point
-│   └── index.css           # Global styles
-├── index.html              # HTML template
-├── package.json            # Dependencies and scripts
-├── tsconfig.json           # TypeScript configuration
-├── vite.config.ts          # Vite configuration
-└── README.md              # This file
+```bash
+npm run dev      # Start development server with HMR
+npm run build    # Build for production
+npm run lint     # Run ESLint
+npm run preview  # Preview production build locally
 ```
 
-## 📝 Vite + React + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🎨 Design Philosophy
 
-Currently, two official plugins are available:
+- **Minimalist, flat UI** – Inspired by modern Pokedex and mobile apps
+- **Soft gradients & shadows** – For depth, but no clutter
+- **Consistent spacing** – Clean, readable layout
+- **Responsive** – Looks great on all devices
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## 🤝 Development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Clean, readable code with TypeScript
+- Modular React components
+- No API keys required (uses public PokeAPI)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📄 License
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This project is open source and available under the MIT License.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🙏 Acknowledgments
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **PokeAPI** – Pokémon data provided by [PokeAPI.co](https://pokeapi.co/)
+- **React Team** – For the amazing framework
+- **Vite Team** – For the blazing-fast build tool
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Built with ❤️ using React, TypeScript, Vite, and GitHub Copilot**
